@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    
+    <style>
+        body {
+            background-color: #f0f4ff;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .edit-info:hover {
+            background-color: #b0c4ff;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .greeting {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .greeting h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .edit-info {
+            background-color: #e0e7ff;
+            border: none;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #333;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .stat-item {
+            background-color: #dde6ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .stat-item h2 {
+            font-size: 15px;
+            color: #000080;
+        }
+
+        .stat-item p {
+            font-size: 12.5px;
+        }
+
+        .days {
+            background-color: #dde6ff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .days p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links a {
+            background-color: #dde6ff;
+            color: #000080;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .links a:hover {
+            background-color: #b0c4ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="status-bar">
+                <div class="icons">
+                    <span class="network"></span>
+                    <span class="wifi"></span>
+                    <span class="battery"></span>
+                </div>
+            </div>
+            <div class="greeting">
+                <h1>김미림님, 안녕하세요</h1>
+                <button class="edit-info">정보 수정하기</button>
+            </div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-item">
+                <h2>12편</h2> <br>
+                <p>일기 개수</p>
+            </div>
+            <div class="stat-item">
+                <h2>36개</h2> <br>
+                <p>학습 단어 개수</p>
+            </div>
+            <div class="stat-item">
+                <h2>단어 초중급</h2> <br>
+                <p>학습 수준</p>
+            </div>
+        </section>
+
+        <section class="days">
+            <p><strong>D+82</strong></p>
+            <p>김미림님과 저희가 함께한지 82일 되었어요.</p>
+        </section>
+
+        <section class="links">
+            <a href="#">만족도 조사</a>
+            <a href="#">자주 묻는 질문</a>
+            <a href="#">소식</a>
+            <a href="#">고객의 소리</a>
+        </section>
+    </div>
+</body>
+
+</html>

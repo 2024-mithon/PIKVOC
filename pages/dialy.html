@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기장</title>
+    <style>
+        body {
+            background-color: #f0f4ff;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        header a {
+            font-family: 'Pretendard-Regular';
+            font-size: 24px;
+            color: #131960;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header p {
+            color: #2b2f85;
+        }
+
+        .back-button {
+            font-size: 24px;
+            color: #2b2f85;
+            text-decoration: none;
+        }
+
+        header h1 {
+            font-size: 22px;
+            color: #2b2f85;
+            margin-top: 10px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .diary-entry {
+            background-color: #AFBFEA;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            width: 90%;
+            z-index: 1;
+            box-shadow: 10px 10px 15px rgba(43, 47, 133, 0.5);
+        }
+
+        .diary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .diary-header p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .edit-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #000080;
+        }
+
+        .diary-entry p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .highlight {
+            color: #ff5757;
+            font-weight: bold;
+        }
+
+        .comment-section {
+            background-color: #d9e2fa;
+            padding: 15px;
+            border-radius: 10px;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        .comment-section p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .comment-section .highlight {
+            color: #ff5757;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-button">< 일기장</a>
+                    <p>김미림님 일기를 총 1편 적으셨어요.</p>
+        </header>
+
+        <section class="diary-entry">
+            <div class="diary-header">
+                <p>10월 18일 금요일</p>
+                <img src="/assets/Vector.png" alt="Edit Icon" class="edit-icon">
+            </div> <br>
+            <h1>너무 너무 피곤한 하루</h1> <br><br>
+            <p>금일은 정말 피곤한 하루였어. <br>
+                아침에 늗잠 자서 회사에 거의 뛰어갔는데,
+                출근길에 차가 막켜서 시간도 많이 지체됬어. <br>
+                점심시간에는 친구랑 맜있는 떡볶이를 먹었고, 
+                오후에는 새로운 프로젝트 때문에 머리가 아팠어. <br>
+                그래도 오늘의 마무리는 넷플릭스에서 
+                재밌는 드라마를 보고 푹 쉬는 걸로!<br>
+            </p>
+        </section>
+
+        <section class="comment-section">
+            <p>금일은 정말 피곤한 하루였어. <br>
+            아침에 <span class='highlight'>늦잠</span> 자서 회사에 거의 뛰어갔는데, 
+            출근길에 차가 <span class='highlight'>막혀서</span> 시간도 많이 <span class='highlight'>지체됐어.</span> <br>
+            점심시간에는 친구랑 <span class='highlight'>맛있는</span> 떡볶이를 먹었고, 
+            오후에는 새로운 프로젝트 때문에 머리가 아팠어. <br>
+            그래도 오늘의 마무리는 넷플릭스에서 재밌는 드라마를 보고 푹 쉬는 걸로!</p>
+        </section>
+    </div>
+</body>
+
+</html>

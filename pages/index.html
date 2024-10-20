@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikvoc</title>
+
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            
+            background-color: #f0f4ff;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #2b2f85;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2b2f85;
+        }
+
+        .greeting {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .user-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .calendar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .day {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .day span {
+            display: block;
+            margin-top: 5px;
+            font-size: 16px;
+            color: #2b2f85;
+        }
+
+        .active span {
+            color: white;
+            background-color: #2b2f85;
+            padding: 5px 10px;
+            border-radius: 50%;
+        }
+
+        .diary-text a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .diary-section {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .diary-text p {
+            margin-bottom: 30px;
+        }
+
+        .diary-bg {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .diary-text {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            color: white;
+            font-size: 18px;
+        }
+
+        .action-cards {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #2b2f85;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .card a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .word-section {
+            margin-bottom: 20px;
+        }
+
+        .word-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .words {
+            background-color: #dde6ff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .word-item {
+            margin-bottom: 15px;
+        }
+
+        .word-item p:first-child {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #000080;
+        }
+
+        .word-item p:last-child {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <header>
+                <div class="header-content">
+                    <h1 class="logo">pikvoc</h1>
+                    <p class="greeting">김미림 님 오늘도 화이팅 하세요!</p>
+                    <a href="mypage.html">
+                        <img src="assets/Group 2.png" alt="Profile Image" class="user-profile">
+                    </a>
+                </div>
+            </header>
+
+        </header>
+
+        <section class="calendar">
+            <div class="day">sun<br><span>6</span></div>
+            <div class="day">mon<br><span>7</span></div>
+            <div class="day">tue<br><span>8</span></div>
+            <div class="day">wed<br><span>9</span></div>
+            <div class="day">thu<br><span>10</span></div>
+            <div class="day active">fri<br><span>11</span></div>
+            <div class="day">sat<br><span>12</span></div>
+        </section>
+
+        <section class="diary-section">
+            <img src="assets/book.png" alt="Diary Background" class="diary-bg">
+            <div class="diary-text">
+                <p>오늘 일기를 써서 학습에 도움을 주세요!</p>
+                <a href="write.html">일기 쓰기 &gt;</a>
+            </div>
+        </section>
+
+        <section class="action-cards">
+            <div class="card">
+                <p>A 단어 복습</p>
+                <a href="Vocabulary_List.html">바로가기 &gt;</a>
+            </div>
+            <div class="card">
+                <p>일기장</p>
+                <a href="dialy.html">바로가기 &gt;</a>
+            </div>
+        </section>
+
+        <section class="word-section">
+            <h2>오늘의 단어</h2>
+            <div class="words">
+                <div class="word-item">
+                    <p>금일</p>
+                    <p>[명사] 지금 지나가고 있는 이날.</p>
+                </div>
+                <div class="word-item">
+                    <p>사흘</p>
+                    <p>[명사] 세 날.</p>
+                </div>
+                <div class="word-item">
+                    <p>심심하다</p>
+                    <p>[형용사] 마음의 표현 정도가 매우 깊고 간절하다.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

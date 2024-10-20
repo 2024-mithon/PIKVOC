@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            padding: 0 10px;
+            background: linear-gradient(135deg, #131960 0%);
+        }
+
+        .wrapper {
+            width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 50px;
+            margin-bottom: 25px;
+            color: #131960;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 15px;
+            color: #131960;
+        }
+
+        button {
+            color: white;
+            background-color: #131960;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border: 20px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 30px;
+            color: #131960;
+        }
+
+        .input-field {
+            position: relative;
+            margin: 20px 0;
+            border: 0.1px;
+            border-color: #AEAEAE;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-field input {
+            width: 100%;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        .forget {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 25px 0 35px 0;
+            color: #131960;
+        }
+
+        .forget label {
+            display: flex;
+            align-items: center;
+        }
+
+        .forget label p {
+            font-size: 12px;
+            margin-left: 8px;
+            color: #AEAEAE;
+        }
+
+        .register {
+            font-size: 12px;
+            color: #AEAEAE;
+        }
+
+        .wrapper a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="loginForm">
+            <h2>pikvoc</h2>
+            <h1>매일 새로운 단어로 나만의 이야기를 써보세요.</h1>
+
+            <div class="input-field">
+                <input type="text" id="username" required placeholder="아이디 또는 이메일">
+                <input type="password" id="password" required placeholder="패스워드 입력">
+            </div>
+
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>로그인 상태 유지</p>
+                </label>
+            </div>
+
+            <button type="button" onclick="login()">로그인</button>
+
+            <div class="register">
+                <p>회원가입 &nbsp;&nbsp; | &nbsp;&nbsp; 아이디 찾기 &nbsp;&nbsp;|&nbsp;&nbsp; 비밀번호 찾기</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const obj = {
+            name: '김미림',
+            id: 'mynameismirim',
+            pw: '1'
+        };
+
+        const objString = JSON.stringify(obj);
+        window.localStorage.setItem('user', objString);
+
+        function login() {
+
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+
+            const userString = window.localStorage.getItem('user');
+            const userObj = JSON.parse(userString);
+
+            if (usernameInput === userObj.id && passwordInput === userObj.pw) {
+                alert('로그인 성공! ' + userObj.name + '님 환영합니다.');
+                window.location.href = 'index.html';
+            } else {
+                alert('로그인 실패! 아이디 또는 패스워드를 확인해주세요.');
+            }
+        }
+    </script>   
+</body>
+</html>
