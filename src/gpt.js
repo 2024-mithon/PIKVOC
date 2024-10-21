@@ -37,8 +37,7 @@ document.getElementById('correctionForm').addEventListener('submit', async funct
     e.preventDefault();
 
     const userInput = document.getElementById('userInput').value; // 사용자 입력 가져오기
-    const apiKey = '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'; // 여기에 실제 API 키를 입력하세요.
-
+    const apiKey = ''
     const result = await fetchChatCompletion(apiKey, userInput);
     document.getElementById('result').innerText = result;
 });
